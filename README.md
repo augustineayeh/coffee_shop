@@ -1,6 +1,6 @@
 # coffee_shop
-
-A new Flutter project.
+A coffee shop UI built with Flutter
+Deisgn inspiration: https://dribbble.com/shots/7969387-Coffee-To-Go-app-design/attachments/520952?mode=media
 
 ## Screenshots 
 | Home Screen | Details Screen |  Order Screen |
