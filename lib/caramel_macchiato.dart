@@ -32,7 +32,7 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                         borderRadius: BorderRadius.circular(35)),
                     child: Padding(
                       padding:
-                          const EdgeInsets.only(top: 20.0, left: 15, right: 15),
+                          const EdgeInsets.only(top: 25.0, left: 15, right: 15),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -52,14 +52,14 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                 fontWeight: FontWeight.w500),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 25,
                           ),
                           Divider(
                             color: Colors.grey.withOpacity(0.5),
                             height: 1,
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 25,
                           ),
                           const Text(
                             'Ingredients',
@@ -67,7 +67,7 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                 fontSize: 15, fontWeight: FontWeight.w700),
                           ),
                           const SizedBox(
-                            height: 15,
+                            height: 20,
                           ),
                           SizedBox(
                             height: 80,
@@ -135,7 +135,7 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                     children: [
                                       Container(
                                           decoration: BoxDecoration(
-                                              color: Colors.blue,
+                                              color: const Color(0xFFf3b4b8),
                                               borderRadius:
                                                   BorderRadius.circular(10)),
                                           height: 45,
@@ -158,12 +158,13 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                     children: [
                                       Container(
                                           decoration: BoxDecoration(
-                                              color: Colors.pink.shade400,
+                                              color: const Color(0xFF8ec588),
                                               borderRadius:
                                                   BorderRadius.circular(10)),
                                           height: 45,
                                           width: 45,
-                                          child: const Icon(Icons.water)),
+                                          child: const Icon(
+                                              FontAwesomeIcons.candyCane)),
                                       const SizedBox(
                                         height: 3,
                                       ),
@@ -187,7 +188,7 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                     children: [
                                       Container(
                                           decoration: BoxDecoration(
-                                              color: Colors.green.shade900,
+                                              color: const Color(0xFF358079),
                                               borderRadius:
                                                   BorderRadius.circular(10)),
                                           height: 45,
@@ -217,7 +218,7 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                     children: [
                                       Container(
                                           decoration: BoxDecoration(
-                                              color: Colors.yellow.shade400,
+                                              color: const Color(0xFFf9bb6a),
                                               borderRadius:
                                                   BorderRadius.circular(10)),
                                           height: 45,
@@ -254,52 +255,107 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                             height: 1,
                           ),
                           const SizedBox(
-                            height: 35,
+                            height: 25,
                           ),
-                          const Text('Nutrition information'),
+                          const Text(
+                            'Nutrition information',
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w700),
+                          ),
                           const SizedBox(
                             height: 5,
                           ),
-                          const Text('Calories   250'),
-                          const SizedBox(
-                            height: 3,
+                          Row(
+                            children: [
+                              Column(
+                                children: const [
+                                  Text('Calories',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.grey)),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Text('Proteins',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.grey)),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Text('Caffeine',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.grey)),
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 25.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      '250',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                    SizedBox(
+                                      height: 3,
+                                    ),
+                                    Text('10g',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w600)),
+                                    SizedBox(
+                                      height: 3,
+                                    ),
+                                    Text('150mg',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w600)),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
-                          const Text('Proteins   10g'),
                           const SizedBox(
-                            height: 3,
+                            height: 25,
                           ),
-                          const Text('Caffeine   150g'),
+                          Divider(
+                            color: Colors.grey.withOpacity(0.5),
+                            height: 1,
+                          ),
                           const SizedBox(
-                            height: 80,
+                            height: 30,
+                          ),
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: SizedBox(
+                              width: 350,
+                              height: 45,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color(0xFF443a37),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(50))),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const PlaceOrder()),
+                                  );
+                                },
+                                child: const Text(
+                                  'Make Order',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ),
+                            ),
                           ),
                         ],
-                      ),
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: SizedBox(
-                    width: 300,
-                    height: 45,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF443a37),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20))),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const PlaceOrder()),
-                        );
-                      },
-                      child: const Text(
-                        'Make Order',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
                       ),
                     ),
                   ),
