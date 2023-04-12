@@ -36,26 +36,75 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+      bottomNavigationBar: SizedBox(
+        height: 83,
+        child: BottomAppBar(
+          shape: const CircularNotchedRectangle(),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/home-2.png',
+                      height: 20,
+                      width: 20,
+                    ),
+                    const Text(
+                      'Home',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/coffee.png',
+                      height: 20,
+                      width: 20,
+                    ),
+                    const Text(
+                      'Orders',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/love.png',
+                      height: 20,
+                      width: 20,
+                    ),
+                    const Text(
+                      'Favourites',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/user.png',
+                      height: 20,
+                      width: 20,
+                    ),
+                    const Text(
+                      'Profile',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.coffee),
-            label: 'Orders',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorites',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

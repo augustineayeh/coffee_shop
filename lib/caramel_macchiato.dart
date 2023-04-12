@@ -111,7 +111,7 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                           height: 45,
                                           width: 45,
                                           child: const Icon(
-                                              FontAwesomeIcons.droplet)),
+                                              FontAwesomeIcons.seedling)),
                                       const SizedBox(
                                         height: 3,
                                       ),
