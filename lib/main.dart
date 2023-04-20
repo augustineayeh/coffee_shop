@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text(
-                      'Welcome, Nadia',
+                      'Welcome, Vivian',
                       style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w700,
