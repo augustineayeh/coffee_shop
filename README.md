@@ -1,5 +1,5 @@
-# coffee_shop
-A coffee shop app UI built with Flutter.
+# Coffee Shop UI
+Built with Flutter.
 
 Deisgn inspo: https://dribbble.com/shots/7969387-Coffee-To-Go-app-design/attachments/520952?mode=media
 
