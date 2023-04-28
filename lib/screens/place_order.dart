@@ -11,6 +11,7 @@ class PlaceOrder extends StatefulWidget {
 class _PlaceOrderState extends State<PlaceOrder> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xFFf3b4b8),
       body: Column(children: [
@@ -30,8 +31,8 @@ class _PlaceOrderState extends State<PlaceOrder> {
                 Positioned(
                     top: 240,
                     child: Container(
-                      height: 650,
-                      width: 430,
+                      height: 640,
+                      width: size.width,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(35)),

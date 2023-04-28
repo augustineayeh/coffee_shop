@@ -1,4 +1,4 @@
-import 'package:coffee_shop/place_order.dart';
+import 'package:coffee_shop/screens/place_order.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -12,6 +12,7 @@ class CaramelMacchiato extends StatefulWidget {
 class _CaramelMacchiatoState extends State<CaramelMacchiato> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xFFf3b4b8),
       body: Padding(
@@ -19,17 +20,21 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
         child: Padding(
           padding: const EdgeInsets.only(top: 0.0),
           child: SafeArea(
+            bottom: false,
             child: Stack(
               clipBehavior: Clip.none,
               children: [
                 Positioned(
-                  top: 350,
+                  bottom: 0,
                   child: Container(
-                    height: 600,
-                    width: 429,
-                    decoration: BoxDecoration(
+                    height: 530,
+                    width: size.width,
+                    decoration: const BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(35)),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(50),
+                          topRight: Radius.circular(50),
+                        )),
                     child: Padding(
                       padding:
                           const EdgeInsets.only(top: 25.0, left: 15, right: 15),
@@ -76,7 +81,6 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                // scrollDirection: Axis.horizontal,
                                 children: [
                                   Column(
                                     children: [
@@ -465,13 +469,6 @@ class _CaramelMacchiatoState extends State<CaramelMacchiato> {
                                     ),
                                     Text(
                                       'marked with espresso and',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w700,
-                                          fontSize: 16),
-                                    ),
-                                    Text(
-                                      'topped with a caramel drizzle',
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.w700,
